@@ -1,11 +1,11 @@
 #!/bin/bash
 # bcm device driver finder script by Štefan Uram (the_waiter/bodhilinux)
- 
+
 b43 () {
    sudo apt purge bcmwl-kernel-source
    sudo apt install firmware-b43-installer && sudo apt install linux-firmware
 }
- 
+
 bcmwl () {
    sudo apt purge firmware-b43-installer
    sudo apt install bcmwl-kernel-source
