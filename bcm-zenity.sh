@@ -41,6 +41,7 @@ var=$(echo "${token// /}")                          # replace spaces
 var=$(echo "${var//]/}")                            # replace ]
 var=$(echo "${var//(/}")                            # replace (
 var=$(echo "${var//)/}")                            # replace )
+
 if [ -z "$token" ]
 then
   zenity --info --width 200 --text "Your Wifi device is not Broadcom!"
