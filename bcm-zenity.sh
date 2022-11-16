@@ -21,17 +21,17 @@ installer () {
 
 question () {
  while true; do
-    zenity --question --text "Do you wish to install suitable bcm driver?"
-    ANS=$?
-        if ANS=0 installer $1; then
-	break;
-        else exit;
-	fi
+     zenity --question --width 200 --text "Do you wish to install\nsuitable bcm driver?"
+     if [[ $? = 0 ]]; then
+        installer $1;
+        break;
+     else exit;
+     fi
 done
 }
 
 unknown () {
-   zenity --info --text 'Unidentified Wifi card. Please check Bodhi wiki!'
+   zenity --info --width 200 --text 'Unidentified Wifi card.\nPlease check Bodhi wiki!'
 }
 
 input=$(lspci -nn -d 14e4:) # executes command and incializes variable
@@ -43,10 +43,14 @@ var=$(echo "${var//(/}")                            # replace (
 var=$(echo "${var//)/}")                            # replace )
 if [ -z "$token" ]
 then
-  zenity --info --text $'Your Wifi device is not Broadcom!'
+  zenity --info --width 200 --text "Your Wifi device is not Broadcom!"
   exit 0
 else
+<<<<<<< HEAD
   zenity --info --text $'Your Wifi device: bcm [14e14:$token]'
+=======
+  zenity --info --width 200 --text "Your Wifi device:\nbcm [14e14:$token"
+>>>>>>> 0515770f478a016f567967add448da2e60f48ebf
 fi
 case $var in
     1713)           question "b43";;
