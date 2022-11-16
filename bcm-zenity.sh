@@ -46,12 +46,10 @@ then
   zenity --info --width 200 --text "Your Wifi device is not Broadcom!"
   exit 0
 else
-<<<<<<< HEAD
   zenity --info --text $'Your Wifi device: bcm [14e14:$token'
-=======
   zenity --info --width 200 --text "Your Wifi device:\nbcm [14e14:$token"
->>>>>>> 0515770f478a016f567967add448da2e60f48ebf
 fi
+
 case $var in
     1713)           question "b43";;
     4301)           question "b43";;
