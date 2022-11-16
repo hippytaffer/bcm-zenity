@@ -43,11 +43,11 @@ var=$(echo "${var//(/}")                            # replace (
 var=$(echo "${var//)/}")                            # replace )
 
 if [ -z "$token" ]
-then
-  zenity --info --width 200 --text "Your Wifi device is not Broadcom!"
-  exit 0
+  then
+    zenity --info --width 200 --text "Your Wifi device is not Broadcom!"
+    exit 0
 else
-  zenity --info --width 200 --text "Your Wifi device:\nbcm [14e14:$token"
+    zenity --info --width 200 --text "Your Wifi device:\nbcm [14e14:$token"
 fi
 
 case $var in
