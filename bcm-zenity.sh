@@ -1,6 +1,6 @@
 #!/bin/bash
 # bcm device driver finder script by Štefan Uram (the_waiter/bodhilinux)
-# with added zeinity support by hippyytaff
+# with added zeinity support by hippytaff
 
 b43 () {
    sudo apt purge bcmwl-kernel-source
@@ -47,7 +47,7 @@ then
   exit 0
 else
 <<<<<<< HEAD
-  zenity --info --text $'Your Wifi device: bcm [14e14:$token]'
+  zenity --info --text $'Your Wifi device: bcm [14e14:$token'
 =======
   zenity --info --width 200 --text "Your Wifi device:\nbcm [14e14:$token"
 >>>>>>> 0515770f478a016f567967add448da2e60f48ebf
