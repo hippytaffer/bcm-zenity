@@ -1,6 +1,6 @@
 #!/bin/bash
 # bcm device driver finder script by Štefan Uram (the_waiter/bodhilinux)
-# with added zeinity support by hippytaff
+# with added zenity support by hippytaff
 
 b43 () {
    sudo apt purge bcmwl-kernel-source
